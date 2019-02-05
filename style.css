@@ -3,7 +3,7 @@ h1{
 }
 .banner {
 	display: grid;
-	grid-template-columns: 50px 1fr 1fr 1fr 1fr 50px;
+	grid-template-columns: 200px 200px 200px;
 	grid-template-rows: 50px;
 	border-width: 2px;
 	border-style: solid;
@@ -12,16 +12,69 @@ h1{
 	font-style: normal;
 	font-family: Courier, monospace;
 	height: 50px;
+	justify-content: center;
 }
-.cosas {
+#situaciones {
+	justify-self: stretch;
+}
+#situaciones:hover {
+	background-color: green;
+}
+.content_table {
+	margin: 30px;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 100px 100px 100px;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 70px;
 }
-.cosillas {
-	grid-column-start: 1;
-	grid-column-end: 2;
+#picture {
+	grid-column-start: 3;
+	grid-column-end: 4;
 	grid-row-start: 1;
 	grid-row-end: 2;
-	align-self: stretch;
+	justify-self: center;
+}
+img[alt=portrait] {
+	border-radius: 50%;
+	border-style: solid;
+	border-color: gray;
+}
+#about_me {
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+	justify-self: center;
+}
+#proyects {
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
+	justify-self: center;
+}
+#interests {
+	grid-column: 3 / 4;
+	grid-row: 2 / 3;
+	justify-self: center;
+}
+#experience {
+	grid-column: 4 / 5;
+	grid-row: 2 / 3;
+	justify-self: center;
+}
+#abilities {
+	grid-column: 5 / 6;
+	grid-row: 2 / 3;
+	justify-self: center;
+}
+.content_table button {
+	margin-top: 20px;
+	background-color: white;
+	color: black;
+	text-align: center;
+	border-style: outset;
+	border-color: green;
+	font-size: 20px;
+	border-radius: 10px;
+	transition-duration: 0.4s;
+}
+.content_table button:hover {
+	color: white;
+	background-color: green;
 }
