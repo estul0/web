@@ -1,3 +1,27 @@
-h1 {
-	color: blue;
+h1{
+	margin: 10px;
+}
+.banner {
+	display: grid;
+	grid-template-columns: 50px 1fr 1fr 1fr 1fr 50px;
+	grid-template-rows: 50px;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 20px;
+	background-color: #d6711f;
+	font-style: normal;
+	font-family: Courier, monospace;
+	height: 50px;
+}
+.cosas {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 100px 100px 100px;
+}
+.cosillas {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	align-self: stretch;
 }
