@@ -73,6 +73,7 @@ img[alt=portrait] {
 	font-size: 20px;
 	border-radius: 10px;
 	transition-duration: 0.4s;
+	cursor: pointer;
 }
 .content_table button:hover {
 	color: white;
