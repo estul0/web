@@ -16,7 +16,7 @@
 			<img src="https://raw.githubusercontent.com/estulo/web/master/Esteban%20Galan.jpg" alt="portrait">
 		</div>
 		<div id="about_me">
-			<button>About Me</button>
+			<a href="cosas.html"><button onclick="aboutMe()">About Me</button></a>
 		</div>
 		<div id="proyects">
 			<button>Proyects</button>
@@ -31,5 +31,11 @@
 			<button>Abilities</button>
 		</div>
 	</div>
+	<div id="info"></div>
 	</body>
+	<script type="text/javascript">
+	function aboutMe() {
+		document.getElementById("info").innerHTML = "/cosas.html";
+	}
+	</script>
 </html>

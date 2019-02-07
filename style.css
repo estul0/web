@@ -79,3 +79,6 @@ img[alt=portrait] {
 	color: white;
 	background-color: green;
 }
+@media(min-width: 700px) {
+
+}
