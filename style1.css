@@ -29,6 +29,7 @@ img[alt=portrait] {
 	border-radius: 50%;
 	border-style: solid;
 	border-color: gray;
+	max-width: 100px;
 }
 .tab {
 	margin: 30px;
