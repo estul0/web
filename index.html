@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" media="screen and (min-width: 700px" href="style.css">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width: 700px" href="style1.css">
 	<link rel="icon" href="https://github.com/estulo/web/blob/master/Creep%20icon.jpg?raw=true">
 	<title>Estulo</title>
 </head>
@@ -15,27 +16,73 @@
 		<div id="picture">
 			<img src="https://raw.githubusercontent.com/estulo/web/master/Esteban%20Galan.jpg" alt="portrait">
 		</div>
-		<div id="about_me">
-			<a href="cosas.html"><button onclick="aboutMe()">About Me</button></a>
+	</div>
+	<div class="tab">
+			<button class="tablinks" onclick="openTab(event, 'about_me')">About Me</button>
+			<button class="tablinks" onclick="openTab(event, 'projects')">Projects</button>
+			<button class="tablinks" onclick="openTab(event, 'interests')">Interests</button>
+			<button class="tablinks" onclick="openTab(event, 'experience')">Experience</button>
+			<button class="tablinks" onclick="openTab(event, 'abilities')">Abilities</button>
+	</div>
+	<div class="content">
+		<div id="about_me" class="tabcontent">
+			<h2 id="title">About me</h2>
+			<p id="info">My name is Esteban Galan and I'm an undergraduate at Universidad de los Andes. At the moment I'm 22 years old, but my birthday is so close I could say I'm 23. Currently I'm studying Computer engeneering and learning how to develop web applications! I know this page is pretty simple, but it's my first one so it is what it is. On a side note, beauty is in the eye of the observer. That is my excuse for picking the ugly colors.</p>
 		</div>
-		<div id="proyects">
-			<button>Proyects</button>
+		<div id="projects" class="tabcontent">
+			<h2 id="title">Projects</h2>
+			<p id="info">Sadly (and don't ask why because I'm not sure myself) I erase all of the projects I've worked on during my time in college so I've got no projects to show here. Even so, I worked with several colleagues during <italics>PMC</italics> to come up with an application which would review public contracts to ensure no money was poorly spent or plainly stolen. My team actually won the contest for the best app desinged! But I'll admit I wasn't too involved in the whole process due to some personal issues.</p>
 		</div>
-		<div id="interests">
-			<button>Intrests</button>
+		<div id="interests" class="tabcontent">
+			<h2 id="title">Interests</h2>
+			<ul id="infoList">
+				<li>Drums! (and Blink182)
+					<iframe width="420" height="315" src="https://www.youtube.com/embed/teuQ9sw5a6k">
+					</iframe>
+				</li>
+				<li>Kung Fu (the same style as Bruce Lee)
+					<img src="https://static1.squarespace.com/static/574dd66227d4bdb54a2f65e3/t/5ab57ee388251b2e6b2f6a74/1525457744682/BL_Website_ETD_rt_profile_store_v1.jpg?format=500w" width="300">
+				</li>
+			</ul>
 		</div>
-		<div id="experience">
-			<button>Experience</button>
+		<div id="experience" class="tabcontent">
+			<h2 id="title">Experience</h2>
+			<p id="info">I'm still an undergraduate and have no working experience yet. I have helped out my family and friends with minor problems which can be solved with programming, but nothing worth noting or showing. On the plus side, I'm quite honest, so I've got that going for me.</p>
 		</div>
-		<div id="abilities">
-			<button>Abilities</button>
+		<div id="abilities" class="tabcontent">
+			<h2 id="title">Abilities</h2>
+			<ul id="infoList">Abilities with programing languages:
+				<li>Java: 4/5</li>
+				<li>Python: 4/5</li>
+				<li>HTML and CSS: 2/5</li>
+				<li>JavaScript: 1/5</li>
+				<li>C# and Unity:2/5</li>
+			</ul>
 		</div>
 	</div>
-	<div id="info"></div>
+	<footer>
+		<p>Page by: Esteban Galan</p>
+		<p>Mail: <a href="mailto:e.galan10@uniandes.edu.co">e.galan10@uniandes.edu.co</a></p>
+		<a href="https://twitter.com/estulo69?lang=en"><img src="/twitter logo.png" height="20" width="20"></a>
+		<a href="https://www.facebook.com/esteban.galan.73"><img src="/facebook logo.png" height="20" width="20"></a>
+	</footer>
 	</body>
 	<script type="text/javascript">
-	function aboutMe() {
-		document.getElementById("info").innerHTML = "/cosas.html";
+	function openTab(evt, tabName) {
+  	var i, tabcontent, tablinks;
+
+	tabcontent = document.getElementsByClassName("tabcontent");
+  	for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  	}
+
+  	tablinks = document.getElementsByClassName("tablinks");
+  	for (i = 0; i < tablinks.length; i++) {
+    	tablinks[i].className = tablinks[i].className.replace(" active", "");
+  	}
+
+  	document.getElementById(tabName).style.display = "grid";
+  	evt.currentTarget.className += " active";
 	}
 	</script>
 </html>
