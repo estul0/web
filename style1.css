@@ -17,11 +17,11 @@ h1{
 .content_table {
 	margin: 30px;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
 }
 #picture {
-	grid-column: 2 / 3;
+	grid-column: 1 / 2;
 	grid-row: 1 / 2;
 	justify-self: center;
 }
@@ -32,10 +32,17 @@ img[alt=portrait] {
 	max-width: 100px;
 }
 .tab {
-	margin: 30px;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 20px;
+	background-color: #d6711f;
+	max-width: 100px;
+	position: fixed;
+	left: 10px;
+	top: 60px;
 }
 .tab button {
 	background-color: white;
@@ -49,7 +56,7 @@ img[alt=portrait] {
 	transition-duration: 0.4s;
 	cursor: pointer;
 	max-width: 150px;
-	justify-self: left;
+	justify-self: center;
 	grid-column: 1 / 2;
 }
 .tab button:hover {
@@ -61,6 +68,13 @@ img[alt=portrait] {
 }
 .tabcontent {
 	display: none;
+}
+.content {
+	font-family: Courier, monospace;
+	border-width: 5px;
+	border-style: solid;
+	border-radius: 15px;
+	background-color: #752932;
 }
 #info {
 	border-style: solid;
